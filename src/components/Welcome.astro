@@ -6,8 +6,11 @@
 	<!-- <img id="background" src={background.src} alt="" fetchpriority="high" /> -->
 	<main>
 		<section id="hero">
-			<h1>Woosik Koong</h1>
-			<h2>Software Engineer based in Philadelphia <span id="amp">;</span></h2>
+			<div class="header">
+				<h1>Woosik Koong</h1>
+				<h2>Software Engineer based in Philadelphia <span id="amp">;</span></h2>
+			</div>
+			
 			<section>
 				<p>Hello! I’m a software engineer with most of my experience in <b>web development</b>. I transitioned into software engineering in 2017 after studying Economics and working as a project manager. The transition was both challenging and exciting. Coming from a non-technical background, everything felt new and full of possibility. </p>	
 				<p>The first phase of my career was spent constantly learning frontend web technologies, with a primary focus on writing clean, maintainable code in <b>JavaScript and React</b>. It’s been fascinating to watch the frontend landscape evolve over the years, and it’s still remarkable to see how quickly the software engineering field shifts—especially with the advent of AI.</p>
@@ -15,6 +18,10 @@
 				<p>Outside of work, I’m always daydreaming about how to perfect my <b>jump shot</b>.</p>
 			</section>
 		</section>
+		<footer class="site-footer">
+			<img src="./logo.png" alt="Logo" class="footer-logo" />
+			<p class="license">© 2025 Woosik Koong. All rights reserved.</p>
+		</footer>
 	</main>
 </div>
 
@@ -47,19 +54,29 @@
 	main {
 		height: 100%;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 	}
 
 	section {
 		z-index: 2;
+		max-width: 600px;
 	}
 
 	#hero {
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		flex-direction: column;
 		justify-content: center;
 		padding: 2rem 1rem;
+	}
+
+	.header {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
 	}
 
 	h1 {
@@ -134,8 +151,30 @@
 		line-height: 24px;
 		letter-spacing: -0.006em;
 		margin: 1.5rem 0;
-		max-width: 600px;
 		text-align: justify;
+	}
+
+	footer {
+		
+	}
+
+	.site-footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;   
+		justify-content: center;
+		font-size: 0.9rem;
+		color: #555;               
+	}
+
+	.footer-logo {
+		width: 40px;    /* adjust to your liking */
+		height: auto;
+		margin-bottom: 0.5rem;
+	}
+
+	.license {
+		margin: 0.5rem;
 	}
 
 	code {
